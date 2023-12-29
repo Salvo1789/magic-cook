@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-xs-12">
         <img 
-        src="" 
-        alt="" 
+        [src]="recipeSel.imagePath" 
+        alt="{{ recipeSel.name }}" 
         class="img-responsive"
         >
     </div>
@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-xs-12">
         <h1>
-            Recipe Name
+            {{ recipeSel.name }}
         </h1>
     </div>
 </div>
@@ -47,7 +47,7 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        Description
+        {{ recipeSel.description }}
     </div>
 </div>
 <div class="row">
