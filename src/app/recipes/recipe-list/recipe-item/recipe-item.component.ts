@@ -8,9 +8,15 @@ import { Recipe } from '../../recipe.model';
 })
 export class RecipeItemComponent {
   @Input() recipe: Recipe;
-  @Output() selectedRecipe = new EventEmitter<void>();
+  @Output() recipeSelected = new EventEmitter<void>();
 
   onSelected(){
-    this.selectedRecipe.emit();
+    this.recipeSelected.emit();
+  }
+
+  constructor() {}
+
+  ngOnInit(){
+    
   }
 }

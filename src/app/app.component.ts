@@ -12,4 +12,10 @@ export class AppComponent {
   onNavigate(feature: string){
     this.loadedFeature = feature;
   }
+
+  constructor() {}
+
+  ngOnInit(){
+    
+  }
 }

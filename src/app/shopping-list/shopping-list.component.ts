@@ -16,4 +16,12 @@ export class ShoppingListComponent {
   constructor(){
 
   }
+
+  ngOnInit(){
+
+  }
+
+  onIngredientAdded(ingredient: Ingredient){
+    this.ingredients.push(ingredient);
+  }
 }

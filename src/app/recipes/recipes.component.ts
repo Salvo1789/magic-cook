@@ -7,5 +7,11 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent {
-  @Input() selRec: Recipe;
+  @Input() selectedRecipe: Recipe;
+
+  constructor() {}
+
+  ngOnInit(){
+    
+  }
 }

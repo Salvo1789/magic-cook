@@ -15,11 +15,13 @@ export class RecipeListComponent {
     new Recipe('Recipe test3', 'Description','https://lobsterfrommaine.com/wp-content/uploads/fly-images/1577/20210517-Pasta-alla-Gricia-with-Lobster3010-1024x576-c.jpg')
   ];
 
-  constructor(){
+  constructor() {}
 
+  ngOnInit(){
+    
   }
   
-  onSelectedRecipe(recipe: Recipe){
-    this.recipeWasSelected.emit(recipe)
+  onRecipeSelected(recipe: Recipe){
+    this.recipeWasSelected.emit(recipe);
   }
 }
