@@ -8,11 +8,6 @@ import { RecipeService } from './recipes/recipe.service';
 })
 export class AppComponent {
   title = 'magic-cook';
-  loadedFeature = 'recipe'
-
-  onNavigate(feature: string){
-    this.loadedFeature = feature;
-  }
 
   constructor() {}
 
