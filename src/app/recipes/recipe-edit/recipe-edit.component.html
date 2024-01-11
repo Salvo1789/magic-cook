@@ -1,1 +1,75 @@
-<p>recipe-edit works!</p>
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Recipe name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      formControlName="name"
+      placeholder="Enter name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="description">Recipe description</label>
+    <input
+      type="text"
+      class="form-control"
+      id="description"
+      formControlName="description"
+      placeholder="Enter description"
+    />
+  </div>
+  <div class="form-group">
+    <label for="imagePath">Recipe image URL</label>
+    <input
+      type="text"
+      class="form-control"
+      id="imagePath"
+      formControlName="imagePath"
+      placeholder="Enter image URL"
+    />
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <img src="" class="img-responsive" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" formArrayName="ingredients">
+      <div 
+      class="row" 
+      [formGroupName]="i"
+      *ngFor="let ingredientCtrl of controls; let i = index">
+        <div class="col-xs-8">
+          <label for="ingName">Ingredient Name</label>
+          <input 
+          type="text" 
+          class="form-control"
+          formControlName="name" />
+        </div>
+        <div class="col-xs-2">
+          <label for="ingAmount">Amount</label>
+          <input 
+          type="number" 
+          class="form-control"
+          formControlName="amount" />
+        </div>
+        <div class="col-xs-2 xBtn">
+          <button class="btn btn-danger">X</button>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12">
+            <button 
+            type="button"
+            class="btn btn-primary"
+            (click)="onAddIngredient()">Add Ingredient</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <button type="submit" class="btn btn-success">Create recipe</button>
+  <button type="button" class="btn btn-warning">Cancel</button>
+</form>
