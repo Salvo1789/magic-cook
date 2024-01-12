@@ -27,11 +27,12 @@
       id="imagePath"
       formControlName="imagePath"
       placeholder="Enter image URL"
+      #imagePath
     />
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <img src="" class="img-responsive" />
+      <img [src]="imagePath.value" class="img-responsive" />
     </div>
   </div>
   <div class="row">
@@ -55,7 +56,9 @@
           formControlName="amount" />
         </div>
         <div class="col-xs-2 xBtn">
-          <button class="btn btn-danger">X</button>
+          <button 
+          class="btn btn-danger"
+          (click)="onDeleteIngredient(i)">X</button>
         </div>
       </div>
       <br>
@@ -70,6 +73,13 @@
     </div>
   </div>
   <hr>
-  <button type="submit" class="btn btn-success">Create recipe</button>
-  <button type="button" class="btn btn-warning">Cancel</button>
+  <button 
+  type="submit" 
+  class="btn btn-success"
+  [disabled]="!recipeForm.valid">{{ editMode ? "Update recipe" : "Create recipe"}}</button>
+  <button 
+  type="button" 
+  class="btn btn-warning"
+  [disabled]="!recipeForm.dirty"
+  (click)="onCancel()">Cancel</button>
 </form>
