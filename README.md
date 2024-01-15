@@ -1,6 +1,28 @@
 # MagicCook
+A web-app which let user get recipes, modify them and create new ones
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+## Used technologies
+This project was generated with the following techs:
+ * [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6
+ * [Firebase](https://firebase.google.com/)
+
+---
+
+## Sections
+
+### 1. Recipes
+
+The page where user can read all the recipes detail by clicking one of them, edit it, delete it, save their ingredients in the Shopping List and adding a new recipe.
+Recipes can be fetched by clicking "Manage" -> "Fetch Data"; to save the new list of recipes in the DB click "Manage" -> "Save Data".
+
+### 2. Shopping List
+
+A section where user can find all the ingredients avaiable and can add new ones 
+
+---
+## Firebase Realtime Database URL
+
+>https://magic-cook-38b01-default-rtdb.firebaseio.com/
 
 ## Development server
 
