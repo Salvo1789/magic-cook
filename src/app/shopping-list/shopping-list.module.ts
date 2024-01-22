@@ -18,7 +18,7 @@ import { FormsModule } from '@angular/forms';
     imports: [
         CommonModule,
         FormsModule,
-        RouterModule.forChild([{ path: 'shopping-list', component: ShoppingListComponent, canActivate: [AuthGuard]}]),
+        RouterModule.forChild([{ path: '', component: ShoppingListComponent, canActivate: [AuthGuard]}]),
         SharedModule
     ]
 })
