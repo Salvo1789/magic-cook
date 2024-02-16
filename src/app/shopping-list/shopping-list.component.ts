@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
-import { Subscription, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { state, trigger, style, transition, animate } from '@angular/animations';
 import { Store } from '@ngrx/store';
-import * as fromShoppingList from './store/shopping-list.reducer';
+import * as fromApp from '../store/app.reducer';
 import { StartEditAction } from './store/shopping-list.actions';
 
 @Component({
@@ -34,7 +34,7 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   // private subscription: Subscription;
 
   constructor(
-      private store: Store<fromShoppingList.AppState>
+      private store: Store<fromApp.AppState>
     ){
 
   }
